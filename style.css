@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    border: 0;box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #edede9;
+    display: flex;
+    justify-content: center;    /* this will bring the object in the center horizontally (left and right axis) */
+    align-items: center;        /* for this to work you have to set the height first */
+}
+
+.calculator {
+    width: 300px;
+    height: 500px;
+    box-shadow: 4px 4px 30px #e3d5ca;
+    border-radius: 12px;
+    background-color: #70587c;
+    overflow: hidden;       /* this hides the input corner making that corner follows the border-radius set */
+}
+
+form input {
+    width: 100%;
+    height: 150px;
+    border: none;
+    border-radius: 12px;
+    font-size: 2rem;
+    padding: 1rem;
+    color: #e3d5ca;
+    background-color: #B392AC;
+    text-align: right;  /* for the input text to start on the right side upon typing */
+    pointer-events: none;   /* makes the screen unclickable */
+}
+
+.buttons {
+    display: flex;      /* this will initially make the buttons go inline as in one line */
+    flex-wrap: wrap;    /* this will make the buttons fit in the width of the calculator */ /* justify-content won't work here, you have to use flex-wrap instead */
+    justify-content: space-between;
+    padding: 20px;
+}
+
+button {
+    flex: 0 0 22%;
+    margin: 5px 0;
+    width: 60px;
+    height: 52px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #735d78;
+    border: 1px solid #735d78;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-operations {   /* you have to remove the btn before the btn-yellow cos it won't be read by the website */
+    background-color: #F7D1CD;
+}
+
+.btn-numbers {
+    background-color: #D1B3C4;
+}
+
+.btn-equal {
+    background-color: #ea698b;
+}
+
+.btn-clear {
+    background-color: #d55d92;
+}
